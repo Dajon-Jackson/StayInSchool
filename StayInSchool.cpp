@@ -1,6 +1,5 @@
 //StayInSchool.cpp
 #include<iostream>
-#include<string>
 #include"School.h"
 #include"Professor.h"
 #include"Staff.h"
