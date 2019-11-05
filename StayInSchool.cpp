@@ -1,10 +1,11 @@
 //StayInSchool.cpp
 #include<iostream>
+#include<string>
 #include"School.h"
 #include"Professor.h"
 #include"Staff.h"
 #include"Student.h"
-using namespacestd;
+using namespace std;
 
 int main(int argc, char** argv){
   School* scPTR[100];
@@ -54,7 +55,7 @@ int main(int argc, char** argv){
       else
         if(choice >4 || choice < 1)
         {
-          cout<<"Invalid choice!\n"
+          cout<<"Invalid choice!\n";
           system("PAUSE");
         }
 

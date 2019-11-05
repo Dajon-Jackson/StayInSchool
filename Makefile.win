@@ -1,0 +1,40 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Professor.o School.o Staff.o StayInSchool.o Student.o
+LINKOBJ  = Professor.o School.o Staff.o StayInSchool.o Student.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = stayInSchool.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Professor.o: Professor.cpp
+	$(CPP) -c Professor.cpp -o Professor.o $(CXXFLAGS)
+
+School.o: School.cpp
+	$(CPP) -c School.cpp -o School.o $(CXXFLAGS)
+
+Staff.o: Staff.cpp
+	$(CPP) -c Staff.cpp -o Staff.o $(CXXFLAGS)
+
+StayInSchool.o: StayInSchool.cpp
+	$(CPP) -c StayInSchool.cpp -o StayInSchool.o $(CXXFLAGS)
+
+Student.o: Student.cpp
+	$(CPP) -c Student.cpp -o Student.o $(CXXFLAGS)
