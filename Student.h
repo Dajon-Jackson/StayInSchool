@@ -1,5 +1,5 @@
 //Student.h
-lass Student {
+class Student {
     public:
        Student(string initialName = "No Name") {
              name = initialName;
