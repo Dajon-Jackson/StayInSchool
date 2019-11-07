@@ -9,8 +9,7 @@ using namespace std;
 
 int main(int argc, char** argv){
   School* scPTR[100];
-  string fname, lname, id;
-  int age;
+  string fname, lname, id, age;
   int counter = 0;
   int choice;
   do
@@ -24,7 +23,7 @@ int main(int argc, char** argv){
     cout<<"Enter the student's first name, last name, and age, and ID number: ";
     cin>>fname>>lname>>age>>id;
     s->setName(fname, lname);
-    s->setAge(age);
+    s = setAge(age);
     s->setID(id);
     scPTR[counter] = s;
 
@@ -37,7 +36,7 @@ int main(int argc, char** argv){
       cout<<"Enter the professor's first name, last name, and age, and ID number: ";
       cin>>fname>>lname>>age>>id;
       p->setName(fname, lname);
-      p->setAge(age);
+      p = setAge(age);
       p->setID(id);
       scPTR[counter] = p;
     }
