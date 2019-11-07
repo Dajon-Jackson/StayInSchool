@@ -11,7 +11,7 @@ School(string, string, string, string);
 void setName(string, string);
 void setAge(string);
 void setID(string);
-string print();
+void print();
 
 protected:
 string first_name;
