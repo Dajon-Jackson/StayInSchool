@@ -10,7 +10,7 @@ School::School(){
 	setID("");
 }
 
-School::School(string first, string last, int age, string id){
+School::School(string first, string last, string age, string id){
 	
 	setName(first, last);
 	setAge(age);
@@ -22,7 +22,7 @@ void School::setName(string first, string last){
 	last_name = last;
 }
 
-void School::setAge(int age){
+void School::setAge(string age){
 	
 	if(age >= 0)
 	age = age;
