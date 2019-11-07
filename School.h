@@ -7,7 +7,7 @@ class School{
 	
 public:
 School();
-School(string, string, string);
+School(string, string, string, string);
 void setName(string, string);
 void setAge(string);
 void setID(string);
