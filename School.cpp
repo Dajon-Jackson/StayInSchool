@@ -24,10 +24,10 @@ void School::setName(string first, string last){
 
 void School::setAge(string age){
 	
-	if(age >= 0)
+	if(age != "")
 	age = age;
 	else
-	age = 0;
+	age = "";
 }
 
 void School::setID(string id){
@@ -36,7 +36,7 @@ void School::setID(string id){
 }
 void School::print(){
 	
-	cout<<"Name:"<<first_name<<""<<last_name<<"/n"
+	cout<<"Name:"<<first_name<<" "<<last_name<<"/n"
 	<<"Age:"<<age<<"/n"
 	<<"ID:"<<id<<"/n";
 }
