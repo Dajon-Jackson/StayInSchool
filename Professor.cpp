@@ -13,7 +13,7 @@ void Professor::setTenure(string tenure){
 void Professor::print(){
 	
 	cout<<"this professor has been working here for"<<tenure<<"year(s)"<<"\n"
-	<<"Name:"<<name<<"\n"
+	<<"Name:"<<first_name<<","<<last_name<<"\n"
 	<<"Age:"<<age<<"\n"
 	<<"ID:"<<id<<"\n"
 }
