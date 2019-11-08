@@ -7,14 +7,13 @@ Faculty::Faculty()
 }
 void Faculty::setPosition(string p)
 {
-	if(position != "")
+	if(p != "")
 		position = p;
 	else
 		position = "";
 }
 void Faculty::print(){
-	cout<<"This "<<position<<" has this information: \n"
-		<<"Name: "<<first_name<<" "<<last_name<<"\n"
-		<<"Age: "<<age<<"\n"
-		<<"ID: "<<id<<endl;
+	cout<<"\nThis faculty member has this information: "<<endl;
+	School::print();
+	cout<<"Position: "<<position<<endl;
 }

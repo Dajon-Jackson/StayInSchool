@@ -6,8 +6,8 @@
 School::School(){
 	
 	setName("", "");
-	setAge(0);
-	setID("");
+	setAge("0");
+	setID("xxxxx");
 }
 
 School::School(string first, string last, string age, string id){
@@ -17,26 +17,25 @@ School::School(string first, string last, string age, string id){
 	setID(id);
 }
 void School::setName(string first, string last){
-	
 	first_name = first;
 	last_name = last;
 }
-
-void School::setAge(string age){
+void School::setAge(string a){
 	
-	if(age != "")
-	age = age;
+	if(a != "0")
+		age = a;
 	else
-	age = "";
+		age = "0";
 }
-
-void School::setID(string id){
+void School::setID(string i){
 	
-	this ->id = id;
+	if(i != "xxxxx")
+		id = i;
+	else
+		id = "xxxxx";
 }
 void School::print(){
-	
-	cout<<"Name:"<<first_name<<" "<<last_name<<"/n"
-	<<"Age:"<<age<<"/n"
-	<<"ID:"<<id<<"/n";
+	cout<<"Name: "<<first_name<<" "<<last_name<<"\n"
+	<<"Age:"<<age<<"\n"
+	<<"ID:"<<id<<endl;
 }
